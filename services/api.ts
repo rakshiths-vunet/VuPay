@@ -1,6 +1,6 @@
 export const loginUser = async (phone_number: string, password: string) => {
     try {
-        const response = await fetch("https://216.48.191.10:8443/auth/login", {
+        const response = await fetch("https://10.1.92.124:8443/auth/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -25,7 +25,7 @@ export const loginUser = async (phone_number: string, password: string) => {
 
 export const verifyOtp = async (transaction_id: string, otp: string) => {
     try {
-        const response = await fetch("https://216.48.191.10:8443/auth/verify-otp", {
+        const response = await fetch("https://10.1.92.124:8443/auth/verify-otp", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -50,7 +50,7 @@ export const verifyOtp = async (transaction_id: string, otp: string) => {
 
 export const resendOtp = async (transaction_id: string) => {
     try {
-        const response = await fetch("https://216.48.191.10:8443/auth/resend-otp", {
+        const response = await fetch("https://10.1.92.124:8443/auth/resend-otp", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -74,7 +74,7 @@ export const resendOtp = async (transaction_id: string) => {
 
 export const getAccountDetails = async (token: string, phone: string) => {
     try {
-        const response = await fetch("https://216.48.191.10:8443/account", {
+        const response = await fetch("https://10.1.92.124:8443/account", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -99,7 +99,7 @@ export const getAccountDetails = async (token: string, phone: string) => {
 
 export const initiatePayment = async (token: string, paymentData: any) => {
     try {
-        const response = await fetch("https://216.48.191.10:8443/payment/initiate", {
+        const response = await fetch("https://10.1.92.124:8443/payment/initiate", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -122,7 +122,7 @@ export const initiatePayment = async (token: string, paymentData: any) => {
 
 export const verifyAccountPassword = async (phone_number: string, account_number: string, account_password: string, token: string) => {
     try {
-        const response = await fetch("https://216.48.191.10:8443/auth/verify-payment", {
+        const response = await fetch("https://10.1.92.124:8443/auth/verify-payment", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -149,7 +149,7 @@ export const verifyAccountPassword = async (phone_number: string, account_number
 
 export const getTransactions = async (token: string, phoneNumber: string) => {
     try {
-        const response = await fetch("https://216.48.191.10:8443/transactions", {
+        const response = await fetch("https://10.1.92.124:8443/transactions", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
